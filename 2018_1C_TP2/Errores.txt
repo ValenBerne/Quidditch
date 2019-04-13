@@ -1,0 +1,164 @@
+Archivos en el directorio de corrida:
+Errores.txt
+entrega-v1.0_tsKubve.sh
+juego.c
+quidditch.c
+quidditch.h
+sombrero.c
+sombrero.h
+Trayendo los archivos de pruebas al directorio de trabajo...
+ # tests-entrega-v1.0.c
+ # tests-interaccion-mostrar-v1.0.c
+ # tests-interaccion-leer-v1.0.c
+Nuevamente... archivos en el directorio de corrida:
+Errores.txt
+entrega-v1.0_tsKubve.sh
+juego.c
+quidditch.c
+quidditch.h
+sombrero.c
+sombrero.h
+tests-entrega-v1.0.c
+tests-interaccion-leer-v1.0.c
+tests-interaccion-mostrar-v1.0.c
+Corriendo compilacion...
+gcc tests-entrega-v1.0.c quidditch.c -o tests -std=c99 -Wall -Wconversion -Werror
+\nCompilacion exitosa
+
+#====================================#
+
+Ejecutando pruebas internas...\n
+Probando mover_jugador(...) ...
+	Jugador aislado...
+Luego de mover jugador, el campo no refleja la posicin del jugador.
+Luego de mover jugador, el campo no refleja la posicin del jugador.
+Luego de mover jugador, el campo no refleja la posicin del jugador.
+Luego de mover jugador, el campo no refleja la posicin del jugador.
+	Jugador cayendo sobre la snitch...
+	Jugador cayendo sobre una bludger...
+Luego de mover jugador, el campo no refleja la posicin del jugador.
+Luego de mover jugador, el campo no refleja la posicin del jugador.
+Luego de mover jugador, el campo no refleja la posicin del jugador.
+	Jugador cayendo sobre un dementor...
+El jugador, de casa Gryffindor, se pos sobre un dementor y se esperaba que ahuyentara al dementor, hacindolo desaparecer. Su posicin debera ser sobreescrita por el que tena a derecha en el vector.
+El jugador, de casa Gryffindor, se pos sobre un dementor y se esperaba que ahuyentara al dementor, hacindolo desaparecer. Su posicin debera ser sobreescrita por el que tena a derecha en el vector.
+Probando mover_snitch(...) ...
+	Snitch alejada del jugador...
+	Snitch a distancia lmite del jugador...
+Luego de llamar a mover_snitch, el campo no refleja la posicin de la snitch.
+Luego de llamar a mover_snitch, el campo no refleja la posicin de la snitch.
+A distancia 10, la snitch se debera mover. Esperado: (16, 1)::Obtenido: (14, 1)
+Luego de llamar a mover_snitch, el campo no refleja la posicin de la snitch.
+	Snitch cerca del jugador: sin obstculos...
+Luego de llamar a mover_snitch, el campo no refleja la posicin de la snitch.
+Luego de llamar a mover_snitch, el campo no refleja la posicin de la snitch.
+Luego de llamar a mover_snitch, el campo no refleja la posicin de la snitch.
+Luego de llamar a mover_snitch, el campo no refleja la posicin de la snitch.
+	Snitch cerca del jugador: empates libres...
+Luego de llamar a mover_snitch, el campo no refleja la posicin de la snitch.
+A una distancia de 4, la snitch se debera mover. Esperado: (15, 6)::Obtenido: (13, 6)
+Luego de llamar a mover_snitch, el campo no refleja la posicin de la snitch.
+Luego de llamar a mover_snitch, el campo no refleja la posicin de la snitch.
+A una distancia de 4, la snitch se debera mover. Esperado: (11, 10)::Obtenido: (11, 8)
+Luego de llamar a mover_snitch, el campo no refleja la posicin de la snitch.
+	Snitch cerca del jugador: empates por bloqueos...
+A una distancia de 4, la snitch se debera mover. Esperado: (9, 6)::Obtenido: (9, 4)
+Luego de llamar a mover_snitch, el campo no refleja la posicin de la snitch.
+A una distancia de 4, la snitch se debera mover. Esperado: (9, 8)::Obtenido: (9, 10)
+Luego de llamar a mover_snitch, el campo no refleja la posicin de la snitch.
+A una distancia de 4, la snitch se debera mover. Esperado: (13, 10)::Obtenido: (15, 10)
+Luego de llamar a mover_snitch, el campo no refleja la posicin de la snitch.
+A una distancia de 4, la snitch se debera mover. Esperado: (13, 4)::Obtenido: (15, 4)
+Luego de llamar a mover_snitch, el campo no refleja la posicin de la snitch.
+	Snitch cerca del jugador: encerrada...
+Aunque la distancia al jugador fuera 2, la snitch no se debera mover sobre el jugador si est encerrada. Esperado: (0, 0)::Obtenido: (-1, -1)
+Luego de llamar a mover_snitch, el campo no refleja la posicin de la snitch.
+Aunque la distancia al jugador fuera 2, la snitch no se debera mover sobre el jugador si est encerrada. Esperado: (24, 0)::Obtenido: (25, 1)
+Luego de llamar a mover_snitch, el campo no refleja la posicin de la snitch.
+Aunque la distancia al jugador fuera 2, la snitch no se debera mover sobre el jugador si est encerrada. Esperado: (0, 14)::Obtenido: (1, 15)
+Luego de llamar a mover_snitch, el campo no refleja la posicin de la snitch.
+Aunque la distancia al jugador fuera 2, la snitch no se debera mover sobre el jugador si est encerrada. Esperado: (24, 14)::Obtenido: (25, 15)
+Luego de llamar a mover_snitch, el campo no refleja la posicin de la snitch.
+Probando mover_bludgers(...) ...
+	Bludgers alejadas del jugador...
+Con una sola bludger en (0, 0), y direccin DERECHA, la bludger no est donde se espera. Esperado: (0, 1)::Obtenido: (68, 1)
+Luego de llamar a mover_bludgers, el campo no refleja las posiciones de las bludgers.
+La bludger[0] no est donde se espera. Esperado: (2, 9)::Obtenido: (73, 9)
+campo[73][9] :: Esperado: 'B' / Obtenido: ''.
+campo[7][9] :: Esperado: 'B' / Obtenido: ' '.
+campo[12][9] :: Esperado: 'B' / Obtenido: ' '.
+campo[17][9] :: Esperado: 'B' / Obtenido: ' '.
+campo[22][9] :: Esperado: 'B' / Obtenido: ' '.
+	Movimiento sobre el borde del campo...
+Con una bludger en (0, 1), y direccin IZQUIERDA, luego de mover 2 veces, la bludger no est donde se espera. Esperado: (0, 1)::Obtenido: (73, -1)
+Luego de llamar a mover_bludgers, el campo no refleja las posiciones de las bludgers.
+La bludger[0] no est donde se espera. Esperado: (2, 13)::Obtenido: (68, 15)
+campo[68][15] :: Esperado: 'B' / Obtenido: ''.
+La bludger[1] no est donde se espera. Esperado: (7, 13)::Obtenido: (7, 15)
+campo[7][15] :: Esperado: 'B' / Obtenido: ' '.
+La bludger[2] no est donde se espera. Esperado: (12, 13)::Obtenido: (12, 15)
+campo[12][15] :: Esperado: 'B' / Obtenido: ' '.
+La bludger[3] no est donde se espera. Esperado: (17, 13)::Obtenido: (17, 15)
+campo[17][15] :: Esperado: 'B' / Obtenido: ' '.
+La bludger[4] no est donde se espera. Esperado: (22, 13)::Obtenido: (22, 15)
+campo[22][15] :: Esperado: 'B' / Obtenido: ' '.
+	Una sola bludger que golpee sin matar al jugador...
+Moviendo la bludger sobre el jugador, debe golpearlo y desaparecer. Cantidad de bludgers sigue en 1
+Moviendo la bludger sobre el jugador, debe golpearlo restando la cantidad de puntos de resistencia correspondiente. Resistencia esperada: 2 / obtenida: 12
+	Una sola bludger que mate al jugador...
+Se esperaba que juego terminara con el jugador perdiendo.
+Moviendo la bludger sobre el jugador, debe golpearlo restando la cantidad de puntos de resistencia correspondiente. Resistencia esperada: <= 0 / obtenida: 8
+Probando inicializar_juego(...) ...
+	validando posicion del jugador...
+	validando distancia de snitch al jugador...
+	validando bludgers...
+Se esperaba que hubiera 5 bludgers pero se encontraron 15
+La bludger en [1] no se encontr donde se esperaba: esperado->(7,0)/obtenido->(5,3)
+La bludger en [2] no se encontr donde se esperaba: esperado->(12,0)/obtenido->(11,11)
+La bludger en [3] no se encontr donde se esperaba: esperado->(17,0)/obtenido->(19,3)
+La bludger en [4] no se encontr donde se esperaba: esperado->(22,0)/obtenido->(19,11)
+	validando dementores...
+Se esperaba que hubiera 4 dementores pero se encontraron 0
+El dementor en [1] no se encontr donde se esperaba: esperado->(5,11)/obtenido->(11,11)
+Probando finalizo_juego(...) ...
+	validando el estado 'en curso'...
+	validando el estado 'perdio'...
+	validando el estado 'gano'...
+Probando posicion_inicial_snitch() ...
+	lanzando 1000 casos de posicion_inicial_snitch() para comprobar la aleatoriedad...
+En 1000 casos, se obtuvieron 0 valores distintos de coordenadas. No parece estarse generando una posicion aleatoria.
+Han fallado algunas pruebas. Entrega fallida.
+Error en la ejecucion de pruebas. Entrega fallida.
+
+#====================================#
+
+Ejecutando pruebas con salida por stdout...\n
+Compilando nuevo programa...\n
+gcc tests-interaccion-mostrar-v1.0.c quidditch.c -o tests -std=c99 -Wall -Wconversion -Werror
+Probando caso de jugador ganador: mostrar_resultado()...\n
+Ganaste
+Probando caso de jugador perdedor: mostrar_resultado()...\n
+Perdio
+
+#====================================#
+
+Ejecutando pruebas con entrada por stdin...\n
+Compilando nuevo programa...\n
+gcc tests-interaccion-leer-v1.0.c quidditch.c -o tests -std=c99 -Wall -Wconversion -Werror
+Probando pedir_movimiento() ...
+	validando movimientos libres desde el centro...
+Para donde quieres volar?
+Para donde quieres volar?
+Para donde quieres volar?
+Para donde quieres volar?
+	validando movimientos sobre el borde del campo...
+Para donde quieres volar?
+Direccion invalida, solo podes moverte con W, A, S y DPara donde quieres volar?
+Se ingreso movimiento 's' estando en la fila 24. Deba fallarse y retornar el siguiente movimiento ledo: 'w', pero se retorno 's'.
+Para donde quieres volar?
+Direccion invalida, solo podes moverte con W, A, S y DDireccion invalida, solo podes moverte con W, A, S y DPara donde quieres volar?
+Se ingreso movimiento 'd' estando en la fila 14. Deba fallarse y retornar el siguiente movimiento ledo: 'a', pero se retorno 'd'.
+Han fallado algunas pruebas. Entrega fallida.
+
+
+Pruebas fallidas! :(
